@@ -13,30 +13,22 @@ def divide(x, y):
     return x / y
 
 def main():
-    print("Simple Calculator")
-    print("Select operation:")
-    print("1. Add")
-    print("2. Subtract")
-    print("3. Multiply")
-    print("4. Divide")
+    # Hardcoded inputs for Jenkins
+    num1 = 10
+    num2 = 5
+    choice = '1'  # Change this to '2', '3', or '4' to test other operations
 
-    choice = input("Enter choice (1/2/3/4): ")
+    print(f"Running calculator with values: {num1}, {num2}")
+    print("Operation choice:", choice)
 
-    if choice in ('1', '2', '3', '4'):
-        try:
-            num1 = float(input("Enter first number: "))
-            num2 = float(input("Enter second number: "))
-
-            if choice == '1':
-                print("Result:", add(num1, num2))
-            elif choice == '2':
-                print("Result:", subtract(num1, num2))
-            elif choice == '3':
-                print("Result:", multiply(num1, num2))
-            elif choice == '4':
-                print("Result:", divide(num1, num2))
-        except ValueError:
-            print("Invalid input. Please enter numbers.")
+    if choice == '1':
+        print("Addition Result:", add(num1, num2))
+    elif choice == '2':
+        print("Subtraction Result:", subtract(num1, num2))
+    elif choice == '3':
+        print("Multiplication Result:", multiply(num1, num2))
+    elif choice == '4':
+        print("Division Result:", divide(num1, num2))
     else:
         print("Invalid choice")
 
