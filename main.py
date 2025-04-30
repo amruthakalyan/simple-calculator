@@ -19,7 +19,7 @@ def main():
     # Hardcoded inputs for Jenkins
     num1 = 10
     num2 = 5
-    choice = '1'  # Change this to '2', '3', or '4' to test other operations
+    choice = '4'  # Change this to '2', '3', or '4' to test other operations
 
     print(f"Running calculator with values: {num1}, {num2}")
     print("Operation choice:", choice)
