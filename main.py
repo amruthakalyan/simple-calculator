@@ -8,34 +8,31 @@ def multiply(x, y):
     return x * y
 
 def divide(x, y):
-    if y == 0:
-        return "Error: Cannot divide by zero"
-    return x / y
-def modulo(x, y):
-    
-    return x % y
+    return x / y if y != 0 else "Error! Division by zero."
 
 def main():
-    # Hardcoded inputs for Jenkins
-    num1 = 10
-    num2 = 5
-    choice = '1'  # Change this to '2', '3', or '4' to test other operations
+    print("Simple Calculator")
+    print("Select operation:")
+    print("1. Add")
+    print("2. Subtract")
+    print("3. Multiply")
+    print("4. Divide")
 
-    print(f"Running calculator with values: {num1}, {num2}")
-    print("Operation choice:", choice)
+    choice = int(input("Enter choice (1/2/3/4): "))  # Get user choice
 
-    if choice == '1':
-        print("Addition Result:", add(num1, num2))
-    elif choice == '2':
-        print("Subtraction Result:", subtract(num1, num2))
-    elif choice == '3':
-        print("Multiplication Result:", multiply(num1, num2))
-    elif choice == '4':
-        print("Division Result:", divide(num1, num2))
-    elif choice == '5':
-        print("Modulo Result:", modulo(num1, num2))    
+    num1 = float(input("Enter first number: "))  # Get first number
+    num2 = float(input("Enter second number: "))  # Get second number
+
+    if choice == 1:
+        print(f"Addition Result: {add(num1, num2)}")
+    elif choice == 2:
+        print(f"Subtraction Result: {subtract(num1, num2)}")
+    elif choice == 3:
+        print(f"Multiplication Result: {multiply(num1, num2)}")
+    elif choice == 4:
+        print(f"Division Result: {divide(num1, num2)}")
     else:
-        print("Invalid choice")
+        print("Invalid input")
 
 if __name__ == "__main__":
     main()
