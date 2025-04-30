@@ -11,6 +11,9 @@ def divide(x, y):
     if y == 0:
         return "Error: Cannot divide by zero"
     return x / y
+def modulo(x, y):
+    
+    return x % y
 
 def main():
     # Hardcoded inputs for Jenkins
@@ -29,6 +32,8 @@ def main():
         print("Multiplication Result:", multiply(num1, num2))
     elif choice == '4':
         print("Division Result:", divide(num1, num2))
+    elif choice == '5':
+        print("Modulo Result:", modulo(num1, num2))    
     else:
         print("Invalid choice")
 
